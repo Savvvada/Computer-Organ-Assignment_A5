@@ -1,0 +1,133 @@
+## Serial
+pi@raspberrypi:~ $ time -p ./dd_serial 
+maximal score is 5, achieved by ligands 
+acehch ieehkc 
+real 122.92
+user 122.75
+sys 0.03
+
+
+## OMP 1
+pi@raspberrypi:~ $ time -p ./dd_omp 7 120 1
+max_ligand=7  nligands=120  nthreads=1
+OMP defined
+maximal score is 5, achieved by ligands 
+acehch ieehkc 
+real 123.30
+user 123.11
+sys 0.02
+
+
+## Threads 1
+pi@raspberrypi:~ $ time -p ./dd_threads 7 120 1
+max_ligand=7  nligands=120  nthreads=1
+maximal score is 5, achieved by ligands 
+acehch ieehkc 
+real 131.12
+user 130.81
+sys 0.04
+
+
+## OMP 2
+pi@raspberrypi:~ $ time -p ./dd_omp 7 120 2
+max_ligand=7  nligands=120  nthreads=2
+OMP defined
+maximal score is 5, achieved by ligands 
+acehch ieehkc 
+real 115.03
+user 142.62
+sys 0.01
+
+
+## Threads 2
+pi@raspberrypi:~ $ time -p ./dd_threads 7 120 2
+max_ligand=7  nligands=120  nthreads=2
+maximal score is 5, achieved by ligands 
+ieehkc acehch 
+real 78.60
+user 142.56
+sys 0.01
+
+
+## OMP 3
+pi@raspberrypi:~ $ time -p ./dd_omp 7 120 3
+max_ligand=7  nligands=120  nthreads=3
+OMP defined
+maximal score is 5, achieved by ligands 
+ieehkc acehch 
+real 98.26
+user 142.53
+sys 0.04
+
+
+## Threads 3
+pi@raspberrypi:~ $ time -p ./dd_threads 7 120 3
+max_ligand=7  nligands=120  nthreads=3
+maximal score is 5, achieved by ligands 
+ieehkc acehch 
+real 55.13
+user 143.76
+sys 0.01
+
+
+## OMP 4
+pi@raspberrypi:~ $ time -p ./dd_omp 7 120 4
+max_ligand=7  nligands=120  nthreads=4
+OMP defined
+maximal score is 5, achieved by ligands 
+ieehkc acehch 
+real 81.08
+user 143.28
+sys 0.06
+
+
+# Threads 4
+pi@raspberrypi:~ $ time -p ./dd_threads 7 120 4
+max_ligand=7  nligands=120  nthreads=4
+maximal score is 5, achieved by ligands 
+ieehkc acehch 
+real 42.07
+user 144.01
+sys 0.12
+
+
+## OMP 5
+pi@raspberrypi:~ $ time -p ./dd_omp 7 120 5
+max_ligand=7  nligands=120  nthreads=5
+OMP defined
+maximal score is 5, achieved by ligands 
+ieehkc acehch 
+real 77.04
+user 144.82
+sys 0.06
+
+
+## Threads 5
+pi@raspberrypi:~ $ time -p ./dd_threads 7 120 5
+max_ligand=7  nligands=120  nthreads=5
+maximal score is 5, achieved by ligands 
+ieehkc acehch 
+real 44.84
+user 144.19
+sys 0.03
+
+
+## OMP max ligand = 11
+pi@raspberrypi:~ $ time -p ./dd_omp 11 120 4
+max_ligand=11  nligands=120  nthreads=4
+OMP defined
+^C
+real 5940.71
+user 23432.69
+sys 10.50
+
+
+## Threads max ligand = 11
+pi@raspberrypi:~ $ time -p ./dd_threads 11
+max_ligand=11  nligands=120  nthreads=4
+^C
+real 4445.64
+user 17765.68
+sys 0.49
+
+

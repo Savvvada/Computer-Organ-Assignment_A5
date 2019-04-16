@@ -1,0 +1,5 @@
+compilingCommand
+g++ -o dd_serial dd_serial.cpp
+g++ -o dd_omp dd_omp.cpp `pkg-config tbb --cflags --libs` -fopenmp
+g++ -o dd_threads dd_threads.cpp `pkg-config tbb --cflags --libs` -lpthread
+
